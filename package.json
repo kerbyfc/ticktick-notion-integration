@@ -1,0 +1,17 @@
+{
+  "name": "ticktick-notion-intergration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@notionhq/client": "^1.0.4",
+    "npm": "^8.5.4",
+    "ticktick-node-api": "^1.2.0",
+    "ticktick-wrapper": "^0.2.0"
+  }
+}
