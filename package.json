@@ -14,5 +14,8 @@
     "npm": "^8.5.4",
     "ticktick-node-api": "^1.2.0",
     "ticktick-wrapper": "^0.2.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
