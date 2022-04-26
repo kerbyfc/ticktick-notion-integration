@@ -52,7 +52,7 @@ const moveTicktickTaskToNotion = async (ticktickTask, {notion}) => {
     };
   }
 
-  if (ticktickTask.tags.length && TAGS_FIELD) {
+  if (ticktickTask.tags && ticktickTask.tags.length && TAGS_FIELD) {
     properties[TAGS_FIELD] = {
       multi_select: ticktickTask.tags.map(tag => ({
         name: capitalize(tag),
