@@ -1,6 +1,6 @@
 const express = require('express');
 const ticktick = require('ticktick-wrapper');
-const {Client} = require("@notionhq/client")
+const {Client} = require("@notionhq/client");
 
 const {
   DATE_FIELD,
