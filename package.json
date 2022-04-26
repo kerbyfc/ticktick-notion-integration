@@ -16,6 +16,6 @@
     "ticktick-wrapper": "^0.2.0"
   },
   "engines": {
-    "node": "16.x"
+    "node": "12.x"
   }
 }
