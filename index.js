@@ -1,3 +1,4 @@
+const express = require('express');
 const ticktick = require('ticktick-wrapper');
 const {Client} = require("@notionhq/client")
 
@@ -8,7 +9,10 @@ const {
   NOTION_DATABASE_ID,
   TICKTICK_USERNAME,
   TICKTICK_PASSWORD,
+  PORT = 80
 } = process.env;
+
+const app = express();
 
 const main = async () => {
   await ticktick.login({
@@ -56,6 +60,7 @@ const moveTicktickTaskToNotion = async (ticktickTask, {notion}) => {
     };
   }
 
+  console.log(`Create notion task`, properties);
   await notion.pages.create({
     properties,
     parent: {
@@ -78,5 +83,13 @@ const createSimpleText = (content) => [{
   },
   type: 'text',
 }];
+
+app
+  .use(express.json())
+  .get('/', async (req, res) => {
+      await main();
+      res.send(200);
+  })
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 main();
