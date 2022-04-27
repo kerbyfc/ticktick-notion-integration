@@ -14,6 +14,7 @@
     "@notionhq/client": "^1.0.4",
     "express": "^4.18.0",
     "jest": "^28.0.1",
+    "lodash": "^4.17.21",
     "npm": "^8.5.4",
     "ticktick-node-api": "^1.2.0",
     "ticktick-wrapper": "^0.2.0"
