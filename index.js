@@ -15,7 +15,7 @@ const {
 
 const app = express();
 
-await tickTick.login({
+tickTick.login({
   email: {
     username: TICKTICK_USERNAME,
     password: TICKTICK_PASSWORD,
